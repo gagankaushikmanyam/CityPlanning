@@ -129,9 +129,6 @@ _Add screenshots here later_
 
 **Gagan Kaushik Manyam**
 
-- AI / Data / Product Enthusiast  
-- Incoming Senior Associate – AI @ PwC
-
 ---
 
 ## ⭐ If you like this project
