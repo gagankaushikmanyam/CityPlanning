@@ -34,8 +34,8 @@ x\^\* \= \\arg\\min\_x \\hat\{T\}\(x\)
 $$
 
 Where:
-- $$ x $$ = urban parameters (geometry, vegetation, albedo)
-- $$ \\hat\{T\}\(x\) $$ = predicted peak canyon temperature
+- $x$ = urban parameters (geometry, vegetation, albedo)
+- $\\hat\{T\}\(x\)$ = predicted peak canyon temperature
 
 ---
 
