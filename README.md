@@ -23,19 +23,19 @@ This project enables exploration, interpretation, and optimization of how urban 
 
 We use a Gaussian Process Regressor:
 
-$begin:math:display$
+$$
 \\hat\{T\}\(x\) \= \\mu\(x\)\, \\quad \\sigma\(x\)
-$end:math:display$
+$$
 
 Optimization is formulated as:
 
-$begin:math:display$
+$$
 x\^\* \= \\arg\\min\_x \\hat\{T\}\(x\)
-$end:math:display$
+$$
 
 Where:
-- $begin:math:text$ x $end:math:text$ = urban parameters (geometry, vegetation, albedo)
-- $begin:math:text$ \\hat\{T\}\(x\) $end:math:text$ = predicted peak canyon temperature
+- $$ x $$ = urban parameters (geometry, vegetation, albedo)
+- $$ \\hat\{T\}\(x\) $$ = predicted peak canyon temperature
 
 ---
 
