@@ -1,21 +1,8 @@
-# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Virtual env
 .venv/
-env/
-
-# OS
+.git/
+.gitignore
 .DS_Store
-
-# Streamlit
-.streamlit/
-
-# Logs
-*.log
-
-# Large model cache
-.cache/

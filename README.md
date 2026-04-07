@@ -24,18 +24,18 @@ This project enables exploration, interpretation, and optimization of how urban 
 We use a Gaussian Process Regressor:
 
 $$
-\\hat\{T\}\(x\) \= \\mu\(x\)\, \\quad \\sigma\(x\)
+\hat{T}(x) = \mu(x), \quad \sigma(x)
 $$
 
 Optimization is formulated as:
 
 $$
-x\^\* \= \\arg\\min\_x \\hat\{T\}\(x\)
+x^* = \arg\min_x \hat{T}(x)
 $$
 
 Where:
 - $x$ = urban parameters (geometry, vegetation, albedo)
-- $\\hat\{T\}\(x\)$ = predicted peak canyon temperature
+- $\hat{T}(x)$ = predicted peak canyon temperature
 
 ---
 
@@ -43,45 +43,50 @@ Where:
 
 | Parameter | Symbol | Description |
 |----------|--------|------------|
-| Wall albedo | α_w | Reflectivity of building walls |
-| Canyon height | H_c | Height of buildings |
-| Canyon width | W_c | Distance between buildings |
-| Roof width | W_r | Width of rooftop |
-| Ground vegetation | f_g | Vegetation fraction on ground |
-| Roof vegetation | f_r | Vegetation fraction on roofs |
-| Tree height | H_t | Height of trees |
-| Tree radius | R_t | Tree crown radius |
+| Wall albedo | $\alpha_w$ | Reflectivity of building walls |
+| Canyon height | $H_c$ | Height of buildings |
+| Canyon width | $W_c$ | Distance between buildings |
+| Roof width | $W_r$ | Width of rooftop |
+| Ground vegetation | $f_g$ | Vegetation fraction on ground |
+| Roof vegetation | $f_r$ | Vegetation fraction on roofs |
+| Tree height | $H_t$ | Height of trees |
+| Tree radius | $R_t$ | Tree crown radius |
 
 ---
 
-## 🖥️ How to Run
+## 🐳 Run with Docker (Recommended)
 
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/gagankaushikmanyam/CityPlanning.git
-cd CityPlanning
-```
-
-### 2. Create virtual environment
+### 1. Build the image
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+docker build -t respace-app .
 ```
 
-### 3. Install dependencies
+### 2. Run the container
 
 ```bash
-pip install --upgrade pip
-pip install -r requirements.txt
+docker run -p 8501:8501 respace-app
 ```
 
-### 4. Run the app
+### 3. Open the app
 
-```bash
-python -m streamlit run app_wrapper.py
 ```
+http://localhost:8501
+```
+
+---
+
+## 🧑‍💻 Run with VS Code DevContainer
+
+1. Install **Dev Containers extension** in VS Code  
+2. Open the project folder  
+3. Press:
+
+```
+Cmd/Ctrl + Shift + P → Dev Containers: Reopen in Container
+```
+
+The app will build and start automatically.
 
 ---
 
@@ -90,7 +95,7 @@ python -m streamlit run app_wrapper.py
 The assistant:
 - Uses **live app state (no hallucination)**
 - Can explain:
-  - model metrics (R², RMSE)
+  - model metrics ($R^2$, RMSE)
   - parameter values
   - optimization results
   - temperature predictions
@@ -102,7 +107,7 @@ Optional:
 
 ## 📸 Preview
 
-_Add screenshots here later_
+_Add screenshots here_
 
 ---
 
@@ -113,6 +118,7 @@ _Add screenshots here later_
 - Scikit-learn
 - Plotly
 - Hugging Face Transformers
+- Docker
 
 ---
 
@@ -121,7 +127,7 @@ _Add screenshots here later_
 - RAG-based paper integration
 - Multi-objective optimization
 - Real-world city datasets
-- Deployment (Streamlit Cloud / Docker)
+- Cloud deployment
 
 ---
 
