@@ -80,7 +80,7 @@ pip install -r requirements.txt
 ### 4. Run the app
 
 ```bash
-streamlit run app_wrapper.py
+python -m streamlit run app_wrapper.py
 ```
 
 ---
