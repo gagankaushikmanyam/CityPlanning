@@ -14,7 +14,7 @@ This project enables exploration, interpretation, and optimization of how urban 
 - ⚙️ Parameter sensitivity exploration
 - 📉 Surrogate-based optimization
 - 🤖 Built-in **App Assistant** (chatbot)
-  - Answers based on live model state (no hallucination)
+  - Answers based on live app state (no hallucination)
   - Optional Hugging Face explanation layer
 
 ---
@@ -54,39 +54,51 @@ Where:
 
 ---
 
-## 🐳 Run with Docker (Recommended)
+## 🧑‍💻 How to Run (DevContainer)
 
-### 1. Build the image
+This project is configured with a **DevContainer**, so no manual setup is required.
 
-```bash
-docker build -t respace-app .
+### Steps:
+
+1. Make sure you have:
+   - Docker installed
+   - VS Code
+   - Dev Containers extension
+
+2. Open the project in VS Code
+
+3. Press:
+
+```
+Cmd/Ctrl + Shift + P
 ```
 
-### 2. Run the container
+4. Select:
 
-```bash
-docker run -p 8501:8501 respace-app
+```
+Dev Containers: Reopen in Container
 ```
 
-### 3. Open the app
+This will:
+- Build the Docker image automatically
+- Install all dependencies
+- Set up the Python environment
+
+---
+
+### Run the App
+
+Once inside the container, simply run:
+
+```bash
+streamlit run app_wrapper.py
+```
+
+Then open:
 
 ```
 http://localhost:8501
 ```
-
----
-
-## 🧑‍💻 Run with VS Code DevContainer
-
-1. Install **Dev Containers extension** in VS Code  
-2. Open the project folder  
-3. Press:
-
-```
-Cmd/Ctrl + Shift + P → Dev Containers: Reopen in Container
-```
-
-The app will build and start automatically.
 
 ---
 
@@ -101,7 +113,7 @@ The assistant:
   - temperature predictions
 
 Optional:
-- Uses Hugging Face (`flan-t5`) for improved explanations
+- Uses Hugging Face (`flan-t5`) for more natural explanations
 
 ---
 
@@ -118,7 +130,7 @@ _Add screenshots here_
 - Scikit-learn
 - Plotly
 - Hugging Face Transformers
-- Docker
+- Docker / DevContainer
 
 ---
 
